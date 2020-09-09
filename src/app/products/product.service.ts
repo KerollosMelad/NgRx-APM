@@ -13,14 +13,7 @@ export class ProductService {
   private productsUrl = 'api/products';
   private products: Product[];
 
-  private selectedProductSource = new BehaviorSubject<Product | null>(null);
-  selectedProductChanges$ = this.selectedProductSource.asObservable();
-
   constructor(private http: HttpClient) { }
-
-  changeSelectedProduct(selectedProduct: Product | null): void {
-    this.selectedProductSource.next(selectedProduct);
-  }
 
   getProducts(): Observable<Product[]> {
     if (this.products) {
@@ -32,17 +25,6 @@ export class ProductService {
         tap(data => this.products = data),
         catchError(this.handleError)
       );
-  }
-
-  // Return an initialized product
-  newProduct(): Product {
-    return {
-      id: 0,
-      productName: '',
-      productCode: 'New',
-      description: '',
-      starRating: 0
-    };
   }
 
   createProduct(product: Product): Observable<Product> {
