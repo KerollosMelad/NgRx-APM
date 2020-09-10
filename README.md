@@ -11,8 +11,6 @@ store
         => On Runtime ( remove on refresh),
         => has slices for each Feature or component 
        
-Action
-
 reducer 
 
       => one for each feature 
@@ -23,7 +21,6 @@ reducer
                                             => without any  variable from out scope
                                             => must be sync 
         => can set multiple actions for the same event 
-
                                   
 Effects 
 
