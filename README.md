@@ -12,6 +12,7 @@ store
         => has slices for each Feature or component 
        
 reducer 
+
       => one for each feature 
       => don't edit part of feature, replace all the feature 
       => take On function => event for actions
