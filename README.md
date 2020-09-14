@@ -1,9 +1,13 @@
 # NgRx-APM
 	Redux
 •	store
+
 •	actions 
+
 •	reducers
+
 •	selector
+
 •	effects
 
 	store  
